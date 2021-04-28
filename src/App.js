@@ -9,21 +9,25 @@ class App extends Component {
     this.state = {
       recipes:[
             {
+              id:1,
               title : "Pasta",
               ingridients : ["oil", "pasta", "water"],
               instructions :"LOREM IPSUN NOR GREE SAY ANYTHING BECAUSE I NOR GET NETWOTRK BLAH BLAH BLAH"
           },
-          {
+          {   
+              id:2,
               title : "Rice",
               ingridients : ["rice", "tomato", "water"],
               instructions :"LOREM IPSUN NOR GREE SAY ANYTHING BECAUSE I NOR GET NETWOTRK BLAH BLAH BLAH"
           },
-          {
+          {   
+              id:3,
               title : "Yam",
               ingridients : ["rice", "yam", "water"],
               instructions :"LOREM IPSUN NOR GREE SAY ANYTHING BECAUSE I NOR GET NETWOTRK BLAH BLAH BLAH"
           }
-      ]
+      ],
+      nextRecipeId: 3,
     }
   }
   render(){
