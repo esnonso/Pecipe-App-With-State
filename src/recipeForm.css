@@ -1,7 +1,7 @@
 form{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 320px;
     margin: 0 auto;
     border: 4px rgb(38, 95, 86) solid;
     padding: 20px 10px;
@@ -27,21 +27,16 @@ button {
     width: 100%;
     margin-bottom: 10px;
     display: flex;
+    flex-direction: row;
   }
-  .field-wrap input {
-    width: 100%;
-    flex-grow: 1;
-  }
-  label {
-    margin-right: 20px;
-  }
+  
   .field-wrap textarea {
     width: 290px
   }
   .add {
       margin-bottom: 5px;
-      margin-top:-15px;
+    
   }
-  ol{
-      padding:5px;
+  label {
+      margin-right: 3px
   }
