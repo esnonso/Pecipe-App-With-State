@@ -11,8 +11,8 @@ class Recipe extends  Component  {
             <div >
                 <div className ="recipeDiv">
             <img src={process.env.PUBLIC_URL + '/rice.png'} alt="logo" />
-            <p>{title}</p>
-            <ul>{ingridients}</ul>
+            <h5>{title}</h5>
+            <ul><h5>Ingridients:</h5>{ingridients}</ul>
             {instructions}
             </div>
             </div>

@@ -4,26 +4,9 @@ import PropTypes from 'prop-types';
 import './recipeList.css'
 
 class RecipeList extends Component {
-    static defaultProps = {
-        recipes:[{
-            title : "Pasta",
-            ingridients : ["oil", "pasta", "water"],
-            instructions :"LOREM IPSUN NOR GREE SAY ANYTHING BECAUSE I NOR GET NETWOTRK BLAH BLAH BLAH"
-        },
-        {
-            title : "Rice",
-            ingridients : ["rice", "tomato", "water"],
-            instructions :"LOREM IPSUN NOR GREE SAY ANYTHING BECAUSE I NOR GET NETWOTRK BLAH BLAH BLAH"
-        },
-        {
-            title : "Yam",
-            ingridients : ["rice", "yam", "water"],
-            instructions :"LOREM IPSUN NOR GREE SAY ANYTHING BECAUSE I NOR GET NETWOTRK BLAH BLAH BLAH"
-        }
-    ]
-    }
+   
     static propTypes = {
-        recipes: PropTypes.arrayOf(PropTypes.object)
+        recipes: PropTypes.arrayOf(PropTypes.object).isRequired
     }
     render(){
         const recipes = this.props.recipes.map((recipe, index) => (
