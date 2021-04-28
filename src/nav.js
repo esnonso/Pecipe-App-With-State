@@ -7,6 +7,7 @@ class Navbar extends Component {
             <div className="nav">
             <h4>Recipe Card</h4>
             <div className ="navItem">
+                <p>New Recipe</p>
                 <p>Home</p>
                 <p>About</p>
                 <p>Contact</p>

@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(37, 179, 174);
+    background-color: rgb(38, 95, 86);
+    color: white;
 }
 
 .navItem {
