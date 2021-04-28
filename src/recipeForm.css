@@ -1,0 +1,47 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    border: 4px rgb(38, 95, 86) solid;
+    padding: 20px 10px;
+    border-radius: 5px;
+}
+h5{
+    margin-bottom: 0px;
+}
+
+button {
+    background-color:rgb(38, 95, 86) ;
+    border: 0px;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btnDiv {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.field-wrap {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .field-wrap input {
+    width: 100%;
+    flex-grow: 1;
+  }
+  label {
+    margin-right: 20px;
+  }
+  .field-wrap textarea {
+    width: 290px
+  }
+  .add {
+      margin-bottom: 5px;
+      margin-top:-15px;
+  }
+  ol{
+      padding:5px;
+  }
