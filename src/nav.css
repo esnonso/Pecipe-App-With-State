@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(37, 179, 174);
+}
+
+.navItem {
+    display: flex;
+    flex-direction: row;
+}
+
+p{
+    margin-right: 10px;
+}
