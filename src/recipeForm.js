@@ -3,25 +3,25 @@ import './recipeForm.css'
 
 class Form extends Component {
     static defaultProps = {
-        onClose() {}
+        onClose() {},
+        onSave() {}
     }
     constructor(props){
         super(props);
-        this.state={ ingridients:[
-            {
+        this.state={
                 title:"",
                 instructions:"",
                 ingridients:[''],
-                img:""
+                image:""
             }
-        ]}
         this.handleChange = this.handleChange.bind(this);
         this.handleNewIngridient = this.handleNewIngridient.bind(this);
         this.handleChangeIng = this.handleChangeIng.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleChange(e) {
-        this.setState({[e.target.name]:e.targe.value})
+        this.setState({[e.target.name]:e.target.value})
     }
 
     handleNewIngridient(e){
@@ -39,6 +39,19 @@ class Form extends Component {
             i===index ? e.target.value : ing //if i is equal to index return the value of that index else return the ing.
             ))
             this.setState({ingridients})
+    }
+    handleSubmit(e) {
+        e.preventDefault();
+        const title = this.state.title
+        console.log(title)
+        this.props.onSave({...this.state});
+
+        this.setState ({
+            title:'',
+            instructions:'',
+            ingridients:[''],
+            image:''
+        })    
     }
    
     render(){
@@ -59,7 +72,7 @@ class Form extends Component {
             </div>
         ))
         return(
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <div className="field-wrap" style={{display:"flex" ,flexDirection:"row-reverse"}}>
             <button type="button"
                 className="close-btn"
@@ -105,8 +118,9 @@ class Form extends Component {
                 onChange={this.handleChange}/>
             </div>
 
-            <div className="btnDiv"><button className="submit">SAVE</button></div>
+            <div className="btnDiv" type="submit"><button className="submit">SAVE</button></div>
             </form>
+            
         )
     }
 }
