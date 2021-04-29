@@ -7,10 +7,15 @@
 }
 
 .navItem {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
 }
-
-p{
+li{
+    list-style: none;
+}
+a{
     margin-right: 10px;
+    color: white;
+    text-decoration: none;
 }
