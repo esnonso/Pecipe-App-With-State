@@ -7,11 +7,12 @@ class Recipe extends  Component  {
         title: PropTypes.string.isRequired,
         ingridients: PropTypes.arrayOf(PropTypes.string).isRequired,
         instructions:PropTypes.string.isRequired,
-        image:PropTypes.string.isRequired
-       
+        image:PropTypes.string.isRequired,
+        id:PropTypes.number.isRequired,
+        onDelete:PropTypes.func.isRequired
     }
     render() {
-        const { title, instructions, image } = this.props; //Destructuring
+        const { title, instructions, image, id, onDelete } = this.props; //Destructuring
         const ingridient = this.props.ingridients.map((ing, index) => (
             <li key={index}>{ing}</li>
        ))
@@ -21,8 +22,9 @@ class Recipe extends  Component  {
                 <div className ="recipeDiv">
             <img src={image} alt="logo" />
             <h5>{title}</h5>
-            <ol>{ingridient}</ol>
-            {instructions}
+            <ol><h5>INGRIDIENTS</h5>{ingridient}</ol>
+           <p>{instructions}</p> 
+            <button type="button" id="delete" onClick={()=> onDelete(id)}>DELETE</button>
             </div>
             </div>
         )

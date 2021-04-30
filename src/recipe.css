@@ -1,10 +1,15 @@
 .recipeDiv {
     height: 500px;
     width: 400px;
-    box-shadow: 5px 5px #888888;
+    box-shadow: 3px 3px #d3cece;
     padding: 10px;
 }
 
 img{
     width:400px;
+}
+
+#delete{
+    background-color: #d3cece;
+    color: black;
 }
